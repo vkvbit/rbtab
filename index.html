@@ -2,16 +2,22 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>BRTab | Vaibhav Kumar</title>
 
 
 	<style type="text/css">
+
+		body, html {
+			width: 100%;
+		    height: 100%;
+		}
 
 		body {
 			height: 100%;
 			margin-top: -1%;
 			margin-left: -0.1%;
 			margin-right: -0.1%;
+			border: thin solid black;
 		}
 
 		div.menu {
@@ -20,6 +26,7 @@
 			margin-top: 1%;
 			margin-right: 0.2%;
 			margin-left: 0.2%;
+			height: 40px;
 		}
 
 		ul {
@@ -43,24 +50,14 @@
 			padding-right: 100px;
 		}
 
-		div.menu a:link {
-		  color: black;
-		  text-decoration: none;
+		iframe {
+			margin-left: 0.3%;
+			margin-right: 0.2%;
 		}
 
-		div.menu a:visited {
-		  color: black;
-		  text-decoration: none;
-		}
-
-		div.menu a:hover {
-		  color: black;
-		  text-decoration: black;
-		}
-
-		div.menu a:active {
-		  color: black;
-		  text-decoration: none;
+		button {
+			border: none;
+			font-size: 1.3rem;
 		}
 
 	</style>
@@ -76,26 +73,50 @@
 		<ul class="tabs">
 
 			<li>
-				<a href="#"><img src="home.png" height="15px"></a>
+				<a href="https://vaibhavkumar.ml/"><img src="home.png" height="21.5px"></a>
 			</li>
 
 			<li class="tab">
-				<a href="#">Classic</a>
+				<button onclick="tabLinkFirst()">
+					Classic
+				</button>
 			</li>
 
 			<li class="tab">
-				<a href="#">Notebook</a>		
+				<button onclick="tabLinkSecond()">
+					Notebook
+				</button>
 			</li>
 
 			<li style="float: right;">
-				<a href="#">X</a>		
+				<button onclick="closeWin()"><img src="close.png" height="21.5px"></button>
 			</li>
 
 		</ul>
 
 	</div>
 
-	<iframe src="" height="90%" width="99%"></iframe>
+	<iframe src="./classic/index.html" height="93%" width="99%" class="iframe" id="iFrame"></iframe>
+
+
+	<script type="text/javascript">
+
+		var firstLink = "./classic/index.html";
+		var secondLink = "./notebook_web/index.html";
+		
+		function tabLinkFirst() {
+			document.getElementById("iFrame").src = firstLink;
+		}
+
+		function tabLinkSecond() {
+			document.getElementById("iFrame").src = secondLink;
+		}
+
+		function closeWin() {
+		  window.close();
+		}
+
+	</script>
 
 </body>
 </html>
