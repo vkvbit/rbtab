@@ -22,11 +22,11 @@
 
 		div.menu {
 			border: thin solid black;
-			border-bottom: 10px solid whitesmoke;
+			border-bottom: thin solid whitesmoke;
 			margin-top: 1%;
 			margin-right: 0.2%;
 			margin-left: 0.2%;
-			height: 40px;
+			height: 75px;
 		}
 
 		ul {
@@ -60,6 +60,10 @@
 			font-size: 1.3rem;
 		}
 
+		ul.addressBar li {
+			border: none;
+		}
+
 	</style>
 
 
@@ -70,50 +74,91 @@
 						
 	<div class="menu">
 
-		<ul class="tabs">
+		<ul class="tabs" style="border-bottom: thin solid black;">
 
 			<li>
-				<a href="https://vaibhavkumar.ml/"><img src="home.png" height="21.5px"></a>
+				<a href="https://vaibhavkumar.ml/"><img src="home.png" height="25px"></a>
 			</li>
 
 			<li class="tab">
-				<button onclick="tabLinkFirst()">
+				<button onclick="tabLinkFirst()" style="height: 28.5px;">
 					Classic
 				</button>
 			</li>
 
 			<li class="tab">
-				<button onclick="tabLinkSecond()">
+				<button onclick="tabLinkSecond()" style="height: 28.5px;">
 					Notebook
 				</button>
 			</li>
 
 			<li style="float: right;">
-				<button onclick="closeWin()"><img src="close.png" height="21.5px"></button>
+				<button onclick="closeWin()">
+					<img src="close.png" height="21.5px">
+				</button>
 			</li>
+
+		</ul>
+
+		<ul class="addressBar">
+
+			<li style="margin-left: 40px;">
+				<button>
+					<img src="previous.png" height="15px">
+				</button>
+			</li>
+
+			<li>
+				<button>
+					<img src="next.png" height="15px">
+				</button>
+			</li>
+
+			<li style="margin-left:20px;">
+				<button onclick="reloadTab()">
+					<img src="reload.png" height="15px">
+				</button>
+			</li>
+
+			<li id="addressBar" style="background-color: white; border: thin solid black; border-radius: 7px; width: 800px; margin-left: 300px; margin-top: 3px; padding-left: 15px;">
+				secure | https://about.vaibhavkumar.ml/classic/index.html
+			</li>
+
+		<ul>
+			
+
 
 		</ul>
 
 	</div>
 
-	<iframe src="./classic/index.html" height="93%" width="99%" class="iframe" id="iFrame"></iframe>
+	<iframe src="./classic/index.html" height="90%" width="99%" class="iframe" id="iFrame"></iframe>
 
 
 	<script type="text/javascript">
 
 		var firstLink = "./classic/index.html";
 		var secondLink = "./notebook_web/index.html";
+
+		var firstAddress = "secure | https://about.vaibhavkumar.ml/classic/index.html";
+		var secondAddress = "secure | https://about.vaibhavkumar.ml/notebook_web/index.html";
 		
 		function tabLinkFirst() {
 			document.getElementById("iFrame").src = firstLink;
+			document.getElementById("addressBar").innerHTML = firstAddress;
 		}
 
 		function tabLinkSecond() {
 			document.getElementById("iFrame").src = secondLink;
+			document.getElementById("addressBar").innerHTML = secondAddress;
 		}
 
 		function closeWin() {
 		  window.close();
+		}		
+
+		function reloadTab() {
+		  location.reload();
 		}
 
 	</script>
