@@ -4,68 +4,7 @@
 	<meta charset="utf-8">
 	<title>RBTab | Vaibhav Kumar</title>
 
-
-	<style type="text/css">
-
-		body, html {
-			width: 100%;
-		    height: 100%;
-		}
-
-		body {
-			height: 100%;
-			margin-top: -1%;
-			margin-left: -0.1%;
-			margin-right: -0.1%;
-			border: thin solid black;
-		}
-
-		div.menu {
-			border: thin solid black;
-			border-bottom: thin solid whitesmoke;
-			margin-top: 1%;
-			margin-right: 0.2%;
-			margin-left: 0.2%;
-			height: 75px;
-		}
-
-		ul {
-		  list-style-type: none;
-		  margin: 0;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: #e6e6e6;
-		}
-
-		li {
-		  float: left;
-		  border: thin solid grey;
-		  padding-top: 2px;
-		  padding-bottom: 2px;
-		  padding-left: 5px;
-		  padding-right: 5px;
-		}
-
-		li.tab {
-			padding-right: 100px;
-		}
-
-		iframe {
-			margin-left: 0.3%;
-			margin-right: 0.2%;
-		}
-
-		button {
-			border: none;
-			font-size: 1.3rem;
-		}
-
-		ul.addressBar li {
-			border: none;
-		}
-
-	</style>
-
+	<link rel="stylesheet" href="main.css">
 
 </head>
 <body>
@@ -137,31 +76,11 @@
 
 	<script type="text/javascript">
 
-		var firstLink = "./classic/index.html";
-		var secondLink = "./notebook_web/index.html";
-
-		var firstAddress = "secure | https://about.vaibhavkumar.ml/classic/index.html";
-		var secondAddress = "secure | https://about.vaibhavkumar.ml/notebook_web/index.html";
 		
-		function tabLinkFirst() {
-			document.getElementById("iFrame").src = firstLink;
-			document.getElementById("addressBar").innerHTML = firstAddress;
-		}
-
-		function tabLinkSecond() {
-			document.getElementById("iFrame").src = secondLink;
-			document.getElementById("addressBar").innerHTML = secondAddress;
-		}
-
-		function closeWin() {
-		  window.close();
-		}		
-
-		function reloadTab() {
-		  location.reload();
-		}
 
 	</script>
+
+	<script src="main.js"></script>
 
 </body>
 </html>
