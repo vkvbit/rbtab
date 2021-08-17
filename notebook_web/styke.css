@@ -1,0 +1,24 @@
+body {
+    font-family: "Lucida Handwriting", "Courier New", monospace;
+    font-size: 1.5rem;
+}
+
+button {
+    font-size: 1.5rem;
+    background-color: lightblue;
+    border: thin solid black;
+    border-radius: 80px;
+    padding: 10px;
+}
+
+button.previous {
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+}
+
+button.next {
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+}

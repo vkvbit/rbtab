@@ -5,35 +5,7 @@
     
         <title>Resume | Vaibhav Kumar</title>
 
-        <style>
-
-            body {
-                font-family: "Lucida Handwriting", "Courier New", monospace;
-                font-size: 1.5rem;
-            }
-
-            button {
-                font-size: 1.5rem;
-                background-color: lightblue;
-                border: thin solid black;
-                border-radius: 80px;
-                padding: 10px;
-            }
-
-            button.previous {
-                position: absolute;
-                bottom: 5%;
-                left: 2%;
-            }
-
-            button.next {
-                position: absolute;
-                bottom: 5%;
-                right: 2%;
-            }
-
-        </style>
-
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <div>
@@ -212,25 +184,7 @@
         </div>
 
 
-        <script>
-            var slideIndex = 1;
-            showDivs(slideIndex);
-
-            function plusDivs(n) {
-              showDivs(slideIndex += n);
-            }
-
-            function showDivs(n) {
-              var i;
-              var x = document.getElementsByClassName("page");
-              if (n > x.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = x.length}
-              for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-              }
-              x[slideIndex-1].style.display = "block";  
-            }
-        </script>
+        <script type="text/javascript" src="main.js"></script>
 
     </body>
 </html>
