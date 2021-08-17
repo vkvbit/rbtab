@@ -30,5 +30,5 @@ function reloadTab() {
 }
 
 function newTab() {
-	alert("Currently, it does not support external page.");
+	alert("Currently, it does not support external pages.");
 }
