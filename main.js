@@ -21,3 +21,7 @@ function closeWin() {
 function reloadTab() {
   location.reload();
 }
+
+function newTab() {
+	alert("Currently, it does not support external page.");
+}
